@@ -1,11 +1,11 @@
 {
-    "name": "aplikasi_2306089",
-    "short_name": "aplikasi_2306089",
+    "name": "Premium Store",
+    "short_name": "Premium Store",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#080808",
+    "theme_color": "#D4AF37",
+    "description": "Premium Store membership marketplace.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

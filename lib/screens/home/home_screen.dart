@@ -84,6 +84,44 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: kBlack,
             title: Text('SELLER DASHBOARD'),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+              child: _SellerIdentityCard(user: user),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+              child: _TierLimitsCard(user: user),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+              child: _MetricsSection(
+                totalRevenue: totalRevenue,
+                totalUnits: totalUnits,
+                activeListings: activeListings,
+                avgPrice: avgPrice,
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(16, 24, 16, 0),
+              child: SectionHeader(
+                title: 'Revenue Overview',
+                actionLabel: '6 Months',
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+              child: _RevenueChart(points: revenuePoints),
+            ),
+          ),
           const SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.fromLTRB(16, 24, 16, 0),
@@ -140,6 +178,19 @@ class HomeScreen extends StatelessWidget {
                 }, childCount: listings.length),
               ),
             ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 24, 16, 100),
+              child: _ExploreShortcutCard(
+                onExplore: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ExploreScreen()),
+                  );
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -836,6 +887,60 @@ class _EmptyListingsCard extends StatelessWidget {
             label: 'Create Listing',
             onPressed: onAdd,
             icon: Icons.add,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ExploreShortcutCard extends StatelessWidget {
+  final VoidCallback onExplore;
+
+  const _ExploreShortcutCard({required this.onExplore});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: kGoldDark),
+        gradient: const LinearGradient(
+          colors: [Color(0xFF1E1600), kDarkCard],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.shopping_bag_outlined, color: kGold, size: 32),
+          const SizedBox(width: 16),
+          const Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Shop the Marketplace',
+                  style: TextStyle(
+                    color: kTextPrimary,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 4),
+                Text(
+                  'Browse products from other Premium Store sellers.',
+                  style: TextStyle(color: kTextSecondary, fontSize: 12),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 12),
+          IconButton(
+            onPressed: onExplore,
+            tooltip: 'Open Explore',
+            icon: const Icon(Icons.arrow_forward, color: kGold),
           ),
         ],
       ),
