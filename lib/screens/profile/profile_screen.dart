@@ -150,9 +150,9 @@ class ProfileScreen extends StatelessWidget {
                   label: 'About App',
                   onTap: () => showAboutDialog(
                     context: context,
-                    applicationName: 'Premium Store',
+                    applicationName: 'Hiso Elite',
                     applicationVersion: '1.0.0',
-                    applicationLegalese: '© 2025 Premium Store',
+                    applicationLegalese: '© 2025 Hiso Elite',
                   ),
                 ),
               ],

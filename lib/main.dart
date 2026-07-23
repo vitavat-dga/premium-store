@@ -28,7 +28,7 @@ class _PremiumAppState extends State<PremiumApp> {
     return AppStateScope(
       notifier: _appState,
       child: MaterialApp(
-        title: 'Premium Store',
+        title: 'Hiso Elite',
         theme: buildAppTheme(),
         debugShowCheckedModeBanner: false,
         home: const LoginScreen(),

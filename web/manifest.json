@@ -1,11 +1,11 @@
 {
-    "name": "Premium Store",
-    "short_name": "Premium Store",
+    "name": "Hiso Elite",
+    "short_name": "Hiso Elite",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#080808",
     "theme_color": "#D4AF37",
-    "description": "Premium Store membership marketplace.",
+    "description": "Hiso Elite membership marketplace.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

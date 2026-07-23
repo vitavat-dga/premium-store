@@ -65,7 +65,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen> with 
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Thank you for shopping\nat Premium Store',
+                    'Thank you for shopping\nat Hiso Elite',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: kTextSecondary, fontSize: 15, height: 1.5),
                   ),

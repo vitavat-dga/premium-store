@@ -644,7 +644,7 @@ class _SuccessDialog extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              'Welcome to Premium Store,\n${user.name}!',
+              'Welcome to Hiso Elite,\n${user.name}!',
               textAlign: TextAlign.center,
               style: const TextStyle(color: kTextSecondary, fontSize: 14),
             ),

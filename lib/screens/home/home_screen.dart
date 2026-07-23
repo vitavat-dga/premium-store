@@ -930,7 +930,7 @@ class _ExploreShortcutCard extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                  'Browse products from other Premium Store sellers.',
+                  'Browse products from other Hiso Elite sellers.',
                   style: TextStyle(color: kTextSecondary, fontSize: 12),
                 ),
               ],
