@@ -145,15 +145,6 @@ class ProfileScreen extends StatelessWidget {
             _MenuSection(
               title: 'More',
               items: [
-                _MenuItem(icon: Icons.notifications_outlined, label: 'Notifications', onTap: () {}),
-                _MenuItem(
-                  icon: Icons.settings_outlined,
-                  label: 'Settings',
-                  onTap: () => ScaffoldMessenger.of(
-                    context,
-                  ).showSnackBar(const SnackBar(content: Text('Settings feature coming soon'))),
-                ),
-                _MenuItem(icon: Icons.help_outline, label: 'Help', onTap: () {}),
                 _MenuItem(
                   icon: Icons.info_outline,
                   label: 'About App',
